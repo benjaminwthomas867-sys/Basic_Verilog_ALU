@@ -27,11 +27,74 @@ module Test_Bench_For_ALU;
         opcode = 3'b001;
         #10;
         $display("Result = ", X);
-        A = 8'd3;   // basic test for left shift
-        B = 8'd0; 
+        A = 8'd3;   
+
         opcode = 3'b110;
+        #10;    // basic test for left shift
+        $display("Result = ", X);
+
+        A = 8'd1;    //test for AND gate function
+        B = 8'd0;
+        opcode = 3'b010;
+        #10;
+        $display("Result =", X);
+
+        
+        A = 8'd1;   
+        B = 8'd1; 
+        opcode = 3'b010;
         #10;
         $display("Result = ", X);
+        
+
+        A = 8'd1;   // basic test for OR
+        B = 8'd0; 
+        opcode = 3'b011;
+        #10;
+        $display("Result = ", X);
+
+        A = 8'd1;   
+        B = 8'd1; 
+        opcode = 3'b011;
+        #10;
+        $display("Result = ", X);
+
+        A = 8'd0;   
+        B = 8'd0; 
+        opcode = 3'b011;
+        #10;
+        $display("Result = ", X);
+
+        
+        A = 8'd1;   // basic test for XOR
+        B = 8'd0; 
+        opcode = 3'b100;
+        #10;
+        $display("Result = ", X);
+        
+        A = 8'd1;   
+        B = 8'd1; 
+        opcode = 3'b100;
+        #10;
+        $display("Result = ", X);
+
+        
+        A = 8'd1;   // basic test for NOT (Bit Flip)
+        opcode = 3'b101;
+        #10;
+        $display("Result = ", X);
+
+        
+        A = 8'd3;   // basic test for Right shift
+        opcode = 3'b111;
+        #10;
+        $display("Result = ", X);
+
+
+
+
+        
+        
     end
 
 endmodule
