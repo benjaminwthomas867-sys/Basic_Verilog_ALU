@@ -1,2 +1,2 @@
-compile: verilator --binary --timing -Wall -Wno-fatal FullAdder.v TB.v --top-module TB
+compile: verilator --binary --timing -Wall -Wno-fatal FullAdder.v TB8bitFA.v --top-module TB
 simulate: ./obj_dir/VTB
